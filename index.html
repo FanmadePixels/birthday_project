@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Nabila Putri Aulia 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(-45deg, #1e1e2f, #3b3b58, #2e2e4e, #4a4a6b);
+      background-size: 400% 400%;
+      animation: bgFlow 20s ease infinite;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    @keyframes bgFlow {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      padding: 3rem 1rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ffadc6;
+    }
+
+    p.message {
+      max-width: 600px;
+      margin: 2rem auto;
+      font-size: 1.3rem;
+      line-height: 1.7;
+      padding: 0 1rem;
+    }
+
+    .thank-you {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .heart-btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border: none;
+      background-color: #ff5b96;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .heart-btn:hover {
+      transform: scale(1.05);
+      background-color: #ff77a9;
+    }
+
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: url('assets/Billa4.jpeg') repeat;
+      animation: starsMove 60s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes starsMove {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    footer {
+      margin: 4rem 1rem 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .scrapbook-photo {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 4px 6px 20px rgba(0,0,0,0.1);
+      transform: rotate(var(--angle, 0deg));
+      transition: transform 0.3s ease;
+      font-family: 'Gloria Hallelujah', cursive;
+    }
+
+    .scrapbook-photo:hover {
+      transform: scale(1.03) rotate(var(--angle, 0deg));
+    }
+
+    .scrapbook-photo img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .scrapbook-photo::before {
+      content: '';
+      background: repeating-linear-gradient(
+        45deg,
+        #f9e255,
+        #f9e255 10px,
+        #fce96a 10px,
+        #fce96a 20px
+      );
+      background-size: cover;
+      width: 60px;
+      height: 20px;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      transform: rotate(-10deg);
+      border-radius: 3px;
+    }
+
+    .photo-caption {
+      font-size: 0.9rem;
+      margin-top: 0.7rem;
+      color: #333;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    .hidden-message {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 0, 0.9);
+      color: #333;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+
+    .scrapbook-photo:hover .hidden-message {
+      opacity: 1;
+    }
+
+    .fan-messages {
+      margin: 3rem auto;
+      max-width: 600px;
+      padding: 0 1rem;
+    }
+
+    .fan-messages textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 10px;
+      border: none;
+      resize: none;
+    }
+
+    .fan-messages button {
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background-color: #ffaaae;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .message-wall {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .message-wall p {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.8rem;
+      border-radius: 10px;
+      margin: 0.5rem 0;
+    }
+
+    /* Sparkle effect */
+    .sparkle {
+      position: fixed;
+      width: 4px;
+      height: 4px;
+      background: yellow;
+      border-radius: 50%;
+      animation: sparkle 3s infinite;
+      opacity: 0;
+    }
+
+    @keyframes sparkle {
+      0% { opacity: 0; transform: translateY(0); }
+      50% { opacity: 1; transform: translateY(-10px); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <!-- Sparkles -->
+  <div class="sparkle" style="top: 20%; left: 30%; animation-delay: 0s;"></div>
+  <div class="sparkle" style="top: 50%; left: 70%; animation-delay: 1s;"></div>
+  <div class="sparkle" style="top: 80%; left: 40%; animation-delay: 2s;"></div>
+
+  <audio id="bgMusic" loop>
+    <source src="assets/SEVENTEEN - HBD.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>Barakallahu Fii Umrik 🎂 Nabila Putri Aulia!</h1>
+    <p class="message">
+      Billaaa!<br><br>
+      I made this special for your birthday today! Hope you like it! 🎉 <br>
+      First of all, Terima kasih sudah jadi sosok yang pernah selalu support aku dlu, and i'm grateful that you've become a warm person not only towrds me, but to others too.
+      Semoga di umur baru ini, semua impianmu makin dekat and like every year my wish for you is to alway be happy and enjoy your life.
+      Just let you know, the world always feels better with you in it and remember there's always people who loves you, so never give up in life 💖<br><br>
+      With all the love from your friend 💌 <br>
+      P.S. Coba klik tombol music di pojok kanan bawah 🎶
+    </p>
+    <p id="typewriter" style="font-style: italic; margin-top: 2rem;"></p>
+    <div class="thank-you">
+      Selamat ulang tahun dalam berbagai bahasa: 🎈 Happy Birthday | 생일 축하해요 | お誕生日おめでとう | Joyeux Anniversaire | Alles Gute!
+    </div>
+    <button class="heart-btn" onclick="sendLove()">💗 Kirim Peluk Virtual</button>
+    <p id="loveReply" style="margin-top: 1rem;"></p>
+  </header>
+
+  <section>
+    <h2 style="margin-top: 4rem;">Kenangan & Harapan 🎁</h2>
+    <div class="gallery">
+      <div class="scrapbook-photo" style="--angle: -3deg;">
+        <img src="assets/Billa2.jpeg" alt="Foto kenangan">
+        <p class="photo-caption">"Always be happy ✨"</p>
+        <div class="hidden-message">Remember, you're precious 💎</div>
+      </div>
+      <div class="scrapbook-photo" style="--angle: 2deg;">
+        <img src="assets/Billa3.jpeg" alt="Foto ulang tahun">
+        <p class="photo-caption">"No matter what happens... 🌟"</p>
+        <div class="hidden-message">You can do it! 💖</div>
+      </div>
+      <!-- Kamu bisa tambahkan lebih banyak foto jika mau -->
+    </div>
+  </section>
+
+  <section class="fan-messages">
+    <h2>Tinggalkan Ucapan untuk Nabila 💌</h2>
+    <textarea id="fanInput" rows="4" placeholder="Tulis ucapan manismu di sini..."></textarea><br>
+    <button onclick="addFanMessage()">Kirim Ucapan</button>
+    <div class="message-wall" id="messageWall"></div>
+  </section>
+
+  <footer>
+    Dibuat dengan cinta 💗 spesial untuk Nabila Putri Aulia ✨
+  </footer>
+
+  <script>
+    function sendLove() {
+      document.getElementById('loveReply').textContent = "Peluk hangat dan ucapan manis terkirim ke Nabila! 🤗";
+    }
+
+    function playMusic() {
+      const audio = document.getElementById("bgMusic");
+      audio.play();
+    }
+
+    const msg = "Semoga hari ulang tahunmu tahun ini yang terbaik, Nabila 💖";
+    let i = 0;
+    const speed = 70;
+
+    function typeWriter() {
+      if (i < msg.length) {
+        document.getElementById("typewriter").innerHTML += msg.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    typeWriter();
+
+    function addFanMessage() {
+      const input = document.getElementById('fanInput');
+      const wall = document.getElementById('messageWall');
+      if (input.value.trim() !== "") {
+        const p = document.createElement('p');
+        p.textContent = input.value.trim();
+        wall.prepend(p);
+        input.value = "";
+      }
+    }
+  </script>
+
+  <button onclick="playMusic()" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; font-size: 1.2rem; border-radius: 50%; background: #ff5b96; color: white; border: none; box-shadow: 0 4px 8px rgba(0,0,0,0.2); cursor: pointer;">
+    🎶
+  </button>
+</body>
+</html>
